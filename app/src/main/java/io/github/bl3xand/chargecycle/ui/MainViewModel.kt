@@ -54,10 +54,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val app = getApplication<Application>()
         viewModelScope.launch {
             val shizukuGranted = ShizukuBridge.hasPermission()
+            var hasWritePermission = ChargeModeController.hasPermission(app)
+            // No adb needed: Shizuku already has shell access, so it can grant this itself.
+            if (shizukuGranted && !hasWritePermission) {
+                hasWritePermission = ShizukuBridge.grantWriteSecureSettings(app)
+            }
             val current = if (shizukuGranted) ShizukuBridge.readCurrentMode() else null
             _uiState.update {
                 it.copy(
-                    hasWritePermission = ChargeModeController.hasPermission(app),
+                    hasWritePermission = hasWritePermission,
                     shizukuGranted = shizukuGranted,
                     currentMode = current
                 )

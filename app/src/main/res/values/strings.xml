@@ -23,7 +23,7 @@
     <string name="button_copy_command">Copy command</string>
 
     <string name="permission_title">Permission required</string>
-    <string name="permission_description">ChargeCycle needs the WRITE_SECURE_SETTINGS permission to change charging modes. Grant it once from a computer:</string>
+    <string name="permission_description">ChargeCycle needs the WRITE_SECURE_SETTINGS permission to change charging modes. This is normally granted automatically via Shizuku - if it\'s still missing, grant it once from a computer:</string>
     <string name="grant_command">adb shell pm grant %1$s android.permission.WRITE_SECURE_SETTINGS</string>
 
     <string name="shizuku_title">Shizuku access required</string>
