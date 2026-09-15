@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">ChargeCycle</string>
     <string name="app_subtitle">Cycle your charging modes from Quick Settings</string>
-    <string name="tile_label">Charge Cycle</string>
 
     <string name="mode_off">Off</string>
     <string name="mode_adaptive">Adaptive Charging</string>

@@ -11,3 +11,6 @@
 *.ap_
 *.dex
 local.properties
+keystore.properties
+*.jks
+*.keystore

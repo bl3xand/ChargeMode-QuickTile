@@ -81,7 +81,7 @@ class ChargeCycleTileService : TileService() {
         val current = if (ready) ShizukuBridge.readCurrentMode() else null
 
         tile.icon = Icon.createWithResource(appContext, R.drawable.ic_tile_charge)
-        tile.label = getString(R.string.tile_label)
+        tile.label = getString(R.string.app_name)
         tile.state = if (ready && current != null) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
         tile.subtitle = when {
             !supported -> getString(R.string.tile_subtitle_unsupported)
