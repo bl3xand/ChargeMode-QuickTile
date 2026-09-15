@@ -17,6 +17,11 @@
     <string name="current_mode_heading">Current mode</string>
     <string name="current_mode_unknown">Unknown</string>
 
+    <!-- Launcher-icon long-press shortcuts. Short labels are capped at 10 characters by the OS. -->
+    <string name="shortcut_short_off">Off</string>
+    <string name="shortcut_short_adaptive">Adaptive</string>
+    <string name="shortcut_short_limit_80">Limit 80%</string>
+
     <string name="section_modes_title">Mode</string>
     <string name="section_modes_subtitle">Choose which modes the tile cycles through</string>
     <string name="button_apply">Apply</string>

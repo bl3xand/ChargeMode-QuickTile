@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="mode_off"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_off"
+        android:shortcutShortLabel="@string/shortcut_short_off"
+        android:shortcutLongLabel="@string/mode_off">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.bl3xand.chargecycle"
+            android:targetClass="io.github.bl3xand.chargecycle.ui.ApplyModeActivity">
+            <extra
+                android:name="mode"
+                android:value="off" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="mode_adaptive"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_adaptive"
+        android:shortcutShortLabel="@string/shortcut_short_adaptive"
+        android:shortcutLongLabel="@string/mode_adaptive">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.bl3xand.chargecycle"
+            android:targetClass="io.github.bl3xand.chargecycle.ui.ApplyModeActivity">
+            <extra
+                android:name="mode"
+                android:value="adaptive" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="mode_limit_80"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_limit80"
+        android:shortcutShortLabel="@string/shortcut_short_limit_80"
+        android:shortcutLongLabel="@string/mode_limit_80">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.bl3xand.chargecycle"
+            android:targetClass="io.github.bl3xand.chargecycle.ui.ApplyModeActivity">
+            <extra
+                android:name="mode"
+                android:value="limit_80" />
+        </intent>
+    </shortcut>
+
+</shortcuts>

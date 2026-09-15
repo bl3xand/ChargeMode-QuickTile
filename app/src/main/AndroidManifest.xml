@@ -26,7 +26,19 @@
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
             </intent-filter>
+            <!-- Long-pressing the launcher icon shows these as quick actions (like iOS's 3D Touch menu). -->
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
         </activity>
+
+        <!-- Invisible trampoline: applies one specific mode (passed as the "mode" extra) and
+             closes, no UI of its own - used by the launcher-icon long-press shortcuts. -->
+        <activity
+            android:name=".ui.ApplyModeActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <service
             android:name=".service.ChargeCycleTileService"
