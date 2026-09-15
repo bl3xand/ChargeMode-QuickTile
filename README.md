@@ -7,6 +7,12 @@ protect the battery long-term. ChargeCycle lets you flip between charging
 modes (Off / Adaptive Charging / Limit to 80%) right from Quick Settings,
 instead of digging through Settings every time.
 
+<p align="center">
+  <img src="docs/screenshots/main-screen.jpg" width="30%" alt="Main screen" />
+  <img src="docs/screenshots/quick-settings-tile.jpg" width="30%" alt="Quick Settings tile" />
+  <img src="docs/screenshots/launcher-shortcuts.jpg" width="30%" alt="Launcher icon shortcuts" />
+</p>
+
 ## Requirements
 
 - Android 15 or newer

@@ -1,6 +1,7 @@
 package io.github.bl3xand.chargecycle.shizuku
 
 import io.github.bl3xand.chargecycle.data.ChargeModeController
+import java.util.concurrent.TimeUnit
 
 /**
  * Instantiated by Shizuku inside a separate, privileged (shell UID) process. Reading these @hide
@@ -27,7 +28,7 @@ class PrivilegedUserService : IPrivilegedService.Stub() {
             val process = ProcessBuilder("pm", "grant", packageName, "android.permission.WRITE_SECURE_SETTINGS")
                 .redirectErrorStream(true)
                 .start()
-            process.waitFor() == 0
+            awaitExit(process) && process.exitValue() == 0
         } catch (_: Exception) {
             false
         }
@@ -38,11 +39,20 @@ class PrivilegedUserService : IPrivilegedService.Stub() {
             val process = ProcessBuilder("settings", "get", "secure", key)
                 .redirectErrorStream(true)
                 .start()
-            val output = process.inputStream.bufferedReader().readText().trim()
-            process.waitFor()
-            output.toIntOrNull()
+            // Wait for exit before reading: `settings get` only ever prints one short line, so
+            // there's no risk of its output pipe filling up and deadlocking the process while
+            // nothing is draining it.
+            if (!awaitExit(process)) return null
+            process.inputStream.bufferedReader().readText().trim().toIntOrNull()
         } catch (_: Exception) {
             null
         }
+    }
+
+    /** Bounds how long a stuck `settings`/`pm` child process can block this Binder call. */
+    private fun awaitExit(process: Process): Boolean {
+        val exited = process.waitFor(5, TimeUnit.SECONDS)
+        if (!exited) process.destroyForcibly()
+        return exited
     }
 }

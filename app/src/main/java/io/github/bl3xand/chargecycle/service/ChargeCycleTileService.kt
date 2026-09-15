@@ -22,6 +22,9 @@ class ChargeCycleTileService : TileService() {
 
     override fun onStartListening() {
         super.onStartListening()
+        // Defensive: if the platform ever calls this again without an intervening
+        // onStopListening(), don't orphan the previous scope's still-running collect.
+        listeningScope?.cancel()
         val scope = CoroutineScope(Dispatchers.Main.immediate + SupervisorJob())
         listeningScope = scope
         scope.launch { refresh() }

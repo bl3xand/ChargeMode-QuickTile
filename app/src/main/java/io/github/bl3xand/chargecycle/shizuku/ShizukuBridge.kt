@@ -8,8 +8,10 @@ import android.os.IBinder
 import io.github.bl3xand.chargecycle.BuildConfig
 import io.github.bl3xand.chargecycle.data.ChargeMode
 import kotlinx.coroutines.CompletableDeferred
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeoutOrNull
 import rikka.shizuku.Shizuku
 
@@ -37,6 +39,7 @@ object ShizukuBridge {
         .version(BuildConfig.VERSION_CODE)
 
     private val bindMutex = Mutex()
+    @Volatile
     private var boundService: IPrivilegedService? = null
 
     fun isAvailable(): Boolean = try {
@@ -67,22 +70,29 @@ object ShizukuBridge {
     suspend fun grantWriteSecureSettings(context: Context): Boolean {
         if (!hasPermission()) return false
         val service = getOrBindService() ?: return false
-        return try {
-            service.grantWriteSecureSettings(context.packageName)
-        } catch (_: Exception) {
-            false
+        // service.grantWriteSecureSettings() is a synchronous (blocking) Binder call - keep it off
+        // the caller's dispatcher (typically Main) so a slow/hung remote process can't cause an ANR.
+        return withContext(Dispatchers.IO) {
+            try {
+                service.grantWriteSecureSettings(context.packageName)
+            } catch (_: Exception) {
+                boundService = null
+                false
+            }
         }
     }
 
     private suspend fun readModeValues(): Pair<Int, Int>? {
         val service = getOrBindService() ?: return null
-        return try {
-            val values = service.readModeValues()
-            if (values.size == 2 && values[0] >= 0 && values[1] >= 0) values[0] to values[1] else null
-        } catch (_: Exception) {
-            // Binder likely died without onServiceDisconnected firing yet - drop it so the next call rebinds.
-            boundService = null
-            null
+        return withContext(Dispatchers.IO) {
+            try {
+                val values = service.readModeValues()
+                if (values.size == 2 && values[0] >= 0 && values[1] >= 0) values[0] to values[1] else null
+            } catch (_: Exception) {
+                // Binder likely died without onServiceDisconnected firing yet - drop it so the next call rebinds.
+                boundService = null
+                null
+            }
         }
     }
 
@@ -108,7 +118,20 @@ object ShizukuBridge {
             } catch (_: Throwable) {
                 return@withLock null
             }
-            withTimeoutOrNull(5_000) { connected.await() }
+            // If this never connects (timeout) or the caller is cancelled first, unbind the
+            // dangling connection instead of leaving it registered with Shizuku forever - repeated
+            // never-unbound connections are what caused the ConcurrentModificationException before.
+            try {
+                withTimeoutOrNull(5_000) { connected.await() }
+            } finally {
+                if (boundService == null) {
+                    try {
+                        Shizuku.unbindUserService(userServiceArgs, oneShotConnection, true)
+                    } catch (_: Throwable) {
+                        // Best effort.
+                    }
+                }
+            }
         }
     }
 }
