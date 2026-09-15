@@ -27,4 +27,4 @@ instead of digging through Settings every time.
 
 ## License
 
-Not yet decided.
+[MIT](LICENSE)
