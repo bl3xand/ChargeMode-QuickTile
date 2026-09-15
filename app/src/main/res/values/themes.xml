@@ -1,0 +1,3 @@
+<resources>
+    <style name="Theme.ChargeCycle" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar" />
+</resources>

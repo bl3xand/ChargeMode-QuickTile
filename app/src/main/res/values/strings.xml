@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">ChargeCycle</string>
+    <string name="app_subtitle">Cycle your charging modes from Quick Settings</string>
+    <string name="tile_label">Charge Cycle</string>
+
+    <string name="mode_off">Off</string>
+    <string name="mode_adaptive">Adaptive Charging</string>
+    <string name="mode_limit_80">Limit to 80%</string>
+
+    <string name="tile_subtitle_no_permission">Setup needed</string>
+    <string name="tile_subtitle_setup">Tap to set up</string>
+    <string name="tile_subtitle_unsupported">Unsupported device</string>
+    <string name="tile_subtitle_shizuku_required">Shizuku access needed</string>
+
+    <string name="unsupported_title">Your device isn\'t supported yet</string>
+
+    <string name="current_mode_heading">Current mode</string>
+    <string name="current_mode_unknown">Unknown</string>
+
+    <string name="section_modes_title">Mode</string>
+    <string name="section_modes_subtitle">Choose which modes the tile cycles through</string>
+    <string name="button_apply">Apply</string>
+    <string name="button_copy_command">Copy command</string>
+
+    <string name="permission_title">Permission required</string>
+    <string name="permission_description">ChargeCycle needs the WRITE_SECURE_SETTINGS permission to change charging modes. Grant it once from a computer:</string>
+    <string name="grant_command">adb shell pm grant %1$s android.permission.WRITE_SECURE_SETTINGS</string>
+
+    <string name="shizuku_title">Shizuku access required</string>
+    <string name="shizuku_description">ChargeCycle uses Shizuku to reliably read the active charging mode (a regular app can\'t read it back). Grant access to enable the tile and mode switches.</string>
+    <string name="button_grant_shizuku">Grant Shizuku access</string>
+    <string name="shizuku_access_required">Shizuku access is required to control charging modes</string>
+    <string name="shizuku_granted">Shizuku access granted</string>
+    <string name="shizuku_denied">Shizuku access denied</string>
+
+    <string name="error_select_at_least_one">Select at least one mode</string>
+    <string name="selection_saved">Saved</string>
+    <string name="command_copied">Command copied</string>
+</resources>
