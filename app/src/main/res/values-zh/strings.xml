@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">ChargeCycle</string>
+    <string name="app_subtitle">在快捷设置中切换充电模式</string>
+    <string name="tile_label">切换充电</string>
+
+    <string name="mode_off">关闭</string>
+    <string name="mode_adaptive">自适应充电</string>
+    <string name="mode_limit_80">限充至80%</string>
+
+    <string name="tile_subtitle_no_permission">需要设置</string>
+    <string name="tile_subtitle_setup">点击设置</string>
+    <string name="tile_subtitle_unsupported">设备不支持</string>
+    <string name="tile_subtitle_shizuku_required">需要 Shizuku 权限</string>
+
+    <string name="unsupported_title">暂不支持您的设备</string>
+
+    <string name="current_mode_heading">当前模式</string>
+    <string name="current_mode_unknown">未知</string>
+
+    <!-- 长按图标显示的快捷方式标签，系统限制短标签最多10个字符。 -->
+    <string name="shortcut_short_off">关闭</string>
+    <string name="shortcut_short_adaptive">自适应</string>
+    <string name="shortcut_short_limit_80">限充80%</string>
+
+    <string name="section_modes_title">模式</string>
+    <string name="section_modes_subtitle">选择磁贴循环切换的模式</string>
+    <string name="button_apply">应用</string>
+    <string name="button_copy_command">复制命令</string>
+
+    <string name="permission_title">需要权限</string>
+    <string name="permission_description">ChargeCycle 需要 WRITE_SECURE_SETTINGS 权限才能更改充电模式。通常会通过 Shizuku 自动授予；如果仍然缺少该权限，请从电脑上手动授予一次：</string>
+    <string name="grant_command">adb shell pm grant %1$s android.permission.WRITE_SECURE_SETTINGS</string>
+
+    <string name="shizuku_title">需要 Shizuku 权限</string>
+    <string name="shizuku_description">ChargeCycle 使用 Shizuku 来可靠地读取当前充电模式（普通应用无法读取该值）。请授予权限以启用磁贴和模式开关。</string>
+    <string name="button_grant_shizuku">授予 Shizuku 权限</string>
+    <string name="shizuku_access_required">控制充电模式需要 Shizuku 权限</string>
+    <string name="shizuku_granted">Shizuku 权限已授予</string>
+    <string name="shizuku_denied">Shizuku 权限被拒绝</string>
+
+    <string name="error_select_at_least_one">请至少选择一个模式</string>
+    <string name="selection_saved">已保存</string>
+    <string name="command_copied">命令已复制</string>
+</resources>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">ChargeCycle</string>
+    <string name="app_subtitle">Переключайте режимы зарядки из шторки</string>
+    <string name="tile_label">Смена зарядки</string>
+
+    <string name="mode_off">Выключено</string>
+    <string name="mode_adaptive">Адаптивная зарядка</string>
+    <string name="mode_limit_80">Лимит 80%</string>
+
+    <string name="tile_subtitle_no_permission">Нужна настройка</string>
+    <string name="tile_subtitle_setup">Нажмите для настройки</string>
+    <string name="tile_subtitle_unsupported">Устройство не поддерживается</string>
+    <string name="tile_subtitle_shizuku_required">Нужен доступ Shizuku</string>
+
+    <string name="unsupported_title">Ваше устройство пока не поддерживается</string>
+
+    <string name="current_mode_heading">Текущий режим</string>
+    <string name="current_mode_unknown">Неизвестно</string>
+
+    <!-- Ярлыки значка при долгом нажатии. Короткие метки ограничены системой десятью символами. -->
+    <string name="shortcut_short_off">Выкл</string>
+    <string name="shortcut_short_adaptive">Адаптивная</string>
+    <string name="shortcut_short_limit_80">Лимит 80%</string>
+
+    <string name="section_modes_title">Режим</string>
+    <string name="section_modes_subtitle">Выберите режимы для цикла плитки</string>
+    <string name="button_apply">Применить</string>
+    <string name="button_copy_command">Скопировать команду</string>
+
+    <string name="permission_title">Требуется разрешение</string>
+    <string name="permission_description">ChargeCycle нужно разрешение WRITE_SECURE_SETTINGS для смены режима зарядки. Обычно оно выдаётся автоматически через Shizuku — если всё ещё отсутствует, выдайте его один раз с компьютера:</string>
+    <string name="grant_command">adb shell pm grant %1$s android.permission.WRITE_SECURE_SETTINGS</string>
+
+    <string name="shizuku_title">Нужен доступ Shizuku</string>
+    <string name="shizuku_description">ChargeCycle использует Shizuku, чтобы надёжно читать активный режим зарядки (обычное приложение не может прочитать его обратно). Выдайте доступ, чтобы включить плитку и переключатели режимов.</string>
+    <string name="button_grant_shizuku">Выдать доступ Shizuku</string>
+    <string name="shizuku_access_required">Для управления зарядкой нужен доступ Shizuku</string>
+    <string name="shizuku_granted">Доступ Shizuku выдан</string>
+    <string name="shizuku_denied">В доступе Shizuku отказано</string>
+
+    <string name="error_select_at_least_one">Выберите хотя бы один режим</string>
+    <string name="selection_saved">Сохранено</string>
+    <string name="command_copied">Команда скопирована</string>
+</resources>
