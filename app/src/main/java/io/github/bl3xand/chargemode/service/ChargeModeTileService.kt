@@ -1,22 +1,22 @@
-package io.github.bl3xand.chargecycle.service
+package io.github.bl3xand.chargemode.service
 
 import android.app.PendingIntent
 import android.content.Intent
 import android.graphics.drawable.Icon
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
-import io.github.bl3xand.chargecycle.R
-import io.github.bl3xand.chargecycle.data.ChargeModeController
-import io.github.bl3xand.chargecycle.data.CyclePrefs
-import io.github.bl3xand.chargecycle.shizuku.ShizukuBridge
-import io.github.bl3xand.chargecycle.ui.MainActivity
+import io.github.bl3xand.chargemode.R
+import io.github.bl3xand.chargemode.data.ChargeModeController
+import io.github.bl3xand.chargemode.data.CyclePrefs
+import io.github.bl3xand.chargemode.shizuku.ShizukuBridge
+import io.github.bl3xand.chargemode.ui.MainActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 
-class ChargeCycleTileService : TileService() {
+class ChargeModeTileService : TileService() {
 
     private var listeningScope: CoroutineScope? = null
 

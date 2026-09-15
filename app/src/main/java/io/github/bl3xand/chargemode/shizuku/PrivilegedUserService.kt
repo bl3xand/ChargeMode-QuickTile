@@ -1,6 +1,6 @@
-package io.github.bl3xand.chargecycle.shizuku
+package io.github.bl3xand.chargemode.shizuku
 
-import io.github.bl3xand.chargecycle.data.ChargeModeController
+import io.github.bl3xand.chargemode.data.ChargeModeController
 import java.util.concurrent.TimeUnit
 
 /**

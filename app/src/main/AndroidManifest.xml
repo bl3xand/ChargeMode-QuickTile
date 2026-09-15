@@ -12,12 +12,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ChargeCycle">
+        android:theme="@style/Theme.ChargeMode">
 
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.ChargeCycle">
+            android:theme="@style/Theme.ChargeMode">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -41,7 +41,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <service
-            android:name=".service.ChargeCycleTileService"
+            android:name=".service.ChargeModeTileService"
             android:exported="true"
             android:icon="@drawable/ic_tile_charge"
             android:label="@string/app_name"

@@ -1,12 +1,12 @@
-package io.github.bl3xand.chargecycle.ui
+package io.github.bl3xand.chargemode.ui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import io.github.bl3xand.chargecycle.data.ChargeMode
-import io.github.bl3xand.chargecycle.data.ChargeModeController
-import io.github.bl3xand.chargecycle.data.CyclePrefs
-import io.github.bl3xand.chargecycle.shizuku.ShizukuBridge
+import io.github.bl3xand.chargemode.data.ChargeMode
+import io.github.bl3xand.chargemode.data.ChargeModeController
+import io.github.bl3xand.chargemode.data.CyclePrefs
+import io.github.bl3xand.chargemode.shizuku.ShizukuBridge
 
 /**
  * Invisible trampoline behind the launcher-icon long-press shortcuts (Android's equivalent of

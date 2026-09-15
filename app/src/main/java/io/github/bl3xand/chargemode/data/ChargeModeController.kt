@@ -1,4 +1,4 @@
-package io.github.bl3xand.chargecycle.data
+package io.github.bl3xand.chargemode.data
 
 import android.Manifest
 import android.content.Context

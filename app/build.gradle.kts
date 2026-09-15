@@ -14,15 +14,15 @@ val keystoreProperties = Properties().apply {
 }
 
 android {
-    namespace = "io.github.bl3xand.chargecycle"
+    namespace = "io.github.bl3xand.chargemode"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "io.github.bl3xand.chargecycle"
+        applicationId = "io.github.bl3xand.chargemode"
         minSdk = 35
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.0.1"
     }
 
     signingConfigs {

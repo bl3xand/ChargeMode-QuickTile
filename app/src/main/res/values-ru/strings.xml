@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">ChargeCycle</string>
-    <string name="app_subtitle">Переключайте режимы зарядки из шторки</string>
+    <string name="app_name">ChargeMode</string>
 
     <string name="mode_off">Выключено</string>
     <string name="mode_adaptive">Адаптивная зарядка</string>
@@ -27,11 +26,11 @@
     <string name="button_copy_command">Скопировать команду</string>
 
     <string name="permission_title">Требуется разрешение</string>
-    <string name="permission_description">ChargeCycle нужно разрешение WRITE_SECURE_SETTINGS для смены режима зарядки. Обычно оно выдаётся автоматически через Shizuku — если всё ещё отсутствует, выдайте его один раз с компьютера:</string>
+    <string name="permission_description">ChargeMode нужно разрешение WRITE_SECURE_SETTINGS для смены режима зарядки. Обычно оно выдаётся автоматически через Shizuku — если всё ещё отсутствует, выдайте его один раз с компьютера:</string>
     <string name="grant_command">adb shell pm grant %1$s android.permission.WRITE_SECURE_SETTINGS</string>
 
     <string name="shizuku_title">Нужен доступ Shizuku</string>
-    <string name="shizuku_description">ChargeCycle использует Shizuku, чтобы надёжно читать активный режим зарядки (обычное приложение не может прочитать его обратно). Выдайте доступ, чтобы включить плитку и переключатели режимов.</string>
+    <string name="shizuku_description">ChargeMode использует Shizuku, чтобы надёжно читать активный режим зарядки (обычное приложение не может прочитать его обратно). Выдайте доступ, чтобы включить плитку и переключатели режимов.</string>
     <string name="button_grant_shizuku">Выдать доступ Shizuku</string>
     <string name="shizuku_access_required">Для управления зарядкой нужен доступ Shizuku</string>
     <string name="shizuku_granted">Доступ Shizuku выдан</string>

@@ -1,13 +1,13 @@
-package io.github.bl3xand.chargecycle.ui
+package io.github.bl3xand.chargemode.ui
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import io.github.bl3xand.chargecycle.R
-import io.github.bl3xand.chargecycle.data.ChargeMode
-import io.github.bl3xand.chargecycle.data.ChargeModeController
-import io.github.bl3xand.chargecycle.data.CyclePrefs
-import io.github.bl3xand.chargecycle.shizuku.ShizukuBridge
+import io.github.bl3xand.chargemode.R
+import io.github.bl3xand.chargemode.data.ChargeMode
+import io.github.bl3xand.chargemode.data.ChargeModeController
+import io.github.bl3xand.chargemode.data.CyclePrefs
+import io.github.bl3xand.chargemode.shizuku.ShizukuBridge
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

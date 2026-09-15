@@ -1,12 +1,12 @@
-package io.github.bl3xand.chargecycle.shizuku
+package io.github.bl3xand.chargemode.shizuku
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.ServiceConnection
 import android.content.pm.PackageManager
 import android.os.IBinder
-import io.github.bl3xand.chargecycle.BuildConfig
-import io.github.bl3xand.chargecycle.data.ChargeMode
+import io.github.bl3xand.chargemode.BuildConfig
+import io.github.bl3xand.chargemode.data.ChargeMode
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex

@@ -9,8 +9,8 @@
         android:shortcutLongLabel="@string/mode_off">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="io.github.bl3xand.chargecycle"
-            android:targetClass="io.github.bl3xand.chargecycle.ui.ApplyModeActivity">
+            android:targetPackage="io.github.bl3xand.chargemode"
+            android:targetClass="io.github.bl3xand.chargemode.ui.ApplyModeActivity">
             <extra
                 android:name="mode"
                 android:value="off" />
@@ -25,8 +25,8 @@
         android:shortcutLongLabel="@string/mode_adaptive">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="io.github.bl3xand.chargecycle"
-            android:targetClass="io.github.bl3xand.chargecycle.ui.ApplyModeActivity">
+            android:targetPackage="io.github.bl3xand.chargemode"
+            android:targetClass="io.github.bl3xand.chargemode.ui.ApplyModeActivity">
             <extra
                 android:name="mode"
                 android:value="adaptive" />
@@ -41,8 +41,8 @@
         android:shortcutLongLabel="@string/mode_limit_80">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="io.github.bl3xand.chargecycle"
-            android:targetClass="io.github.bl3xand.chargecycle.ui.ApplyModeActivity">
+            android:targetPackage="io.github.bl3xand.chargemode"
+            android:targetClass="io.github.bl3xand.chargemode.ui.ApplyModeActivity">
             <extra
                 android:name="mode"
                 android:value="limit_80" />

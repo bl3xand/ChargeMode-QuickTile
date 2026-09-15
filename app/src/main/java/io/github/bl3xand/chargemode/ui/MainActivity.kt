@@ -1,4 +1,4 @@
-package io.github.bl3xand.chargecycle.ui
+package io.github.bl3xand.chargemode.ui
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -14,11 +14,11 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.google.android.material.materialswitch.MaterialSwitch
 import com.google.android.material.snackbar.Snackbar
-import io.github.bl3xand.chargecycle.R
-import io.github.bl3xand.chargecycle.data.ChargeMode
-import io.github.bl3xand.chargecycle.data.ChargeModeController
-import io.github.bl3xand.chargecycle.databinding.ActivityMainBinding
-import io.github.bl3xand.chargecycle.shizuku.ShizukuBridge
+import io.github.bl3xand.chargemode.R
+import io.github.bl3xand.chargemode.data.ChargeMode
+import io.github.bl3xand.chargemode.data.ChargeModeController
+import io.github.bl3xand.chargemode.databinding.ActivityMainBinding
+import io.github.bl3xand.chargemode.shizuku.ShizukuBridge
 import kotlinx.coroutines.launch
 import rikka.shizuku.Shizuku
 

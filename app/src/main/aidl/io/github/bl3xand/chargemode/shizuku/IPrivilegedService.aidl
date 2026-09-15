@@ -1,4 +1,4 @@
-package io.github.bl3xand.chargecycle.shizuku;
+package io.github.bl3xand.chargemode.shizuku;
 
 // Runs inside the privileged (shell UID) process Shizuku spawns, where reading @hide
 // Settings.Secure keys and granting signature permissions is allowed.

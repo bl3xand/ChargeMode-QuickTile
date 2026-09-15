@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">ChargeCycle</string>
-    <string name="app_subtitle">Cycle your charging modes from Quick Settings</string>
+    <string name="app_name">ChargeMode</string>
 
     <string name="mode_off">Off</string>
     <string name="mode_adaptive">Adaptive Charging</string>
@@ -27,11 +26,11 @@
     <string name="button_copy_command">Copy command</string>
 
     <string name="permission_title">Permission required</string>
-    <string name="permission_description">ChargeCycle needs the WRITE_SECURE_SETTINGS permission to change charging modes. This is normally granted automatically via Shizuku - if it\'s still missing, grant it once from a computer:</string>
+    <string name="permission_description">ChargeMode needs the WRITE_SECURE_SETTINGS permission to change charging modes. This is normally granted automatically via Shizuku - if it\'s still missing, grant it once from a computer:</string>
     <string name="grant_command">adb shell pm grant %1$s android.permission.WRITE_SECURE_SETTINGS</string>
 
     <string name="shizuku_title">Shizuku access required</string>
-    <string name="shizuku_description">ChargeCycle uses Shizuku to reliably read the active charging mode (a regular app can\'t read it back). Grant access to enable the tile and mode switches.</string>
+    <string name="shizuku_description">ChargeMode uses Shizuku to reliably read the active charging mode (a regular app can\'t read it back). Grant access to enable the tile and mode switches.</string>
     <string name="button_grant_shizuku">Grant Shizuku access</string>
     <string name="shizuku_access_required">Shizuku access is required to control charging modes</string>
     <string name="shizuku_granted">Shizuku access granted</string>

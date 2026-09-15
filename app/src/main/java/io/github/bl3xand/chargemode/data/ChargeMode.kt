@@ -1,7 +1,7 @@
-package io.github.bl3xand.chargecycle.data
+package io.github.bl3xand.chargemode.data
 
 import androidx.annotation.StringRes
-import io.github.bl3xand.chargecycle.R
+import io.github.bl3xand.chargemode.R
 
 /**
  * The three charging modes exposed by Pixel's "Charging optimization" screen, mapped to the
