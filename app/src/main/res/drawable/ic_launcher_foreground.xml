@@ -3,13 +3,12 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <group
-        android:scaleX="2.5"
-        android:scaleY="2.5"
-        android:translateX="24"
-        android:translateY="24">
-        <path
-            android:fillColor="#FFFFFFFF"
-            android:pathData="M15.67,4H14V2h-4v2H8.33C7.6,4,7,4.6,7,5.33v15.34C7,21.4,7.6,22,8.33,22h7.33c0.74,0,1.34,-0.6,1.34,-1.33V5.33C17,4.6,16.4,4,15.67,4zM11,20v-5.5H9L13,7v5.5h2L11,20z" />
-    </group>
+    <!-- The battery: a cap and a body with the bolt cut out of it. -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M49,29h10a2,2 0,0 1,2 2v3h-14v-3a2,2 0,0 1,2 -2z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M45,34h18a5,5 0,0 1,5 5v37a5,5 0,0 1,-5 5h-18a5,5 0,0 1,-5 -5v-37a5,5 0,0 1,5 -5zM57.5,41L46.5,59h6.5l-2.5,15L61.5,55.5h-6.5z" />
 </vector>
